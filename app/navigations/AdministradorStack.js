@@ -1,6 +1,10 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Administrador from "../screens/Administrador/Administrador";
+import GestionDepto from "../screens/Administrador/GestionDepto";
+import GestionJefe from "../screens/Administrador/GestionJefe";
+import addDepto from "../screens/Administrador/addDepto";
+import addJefe from "../screens/Administrador/addJefe";
 
 
 const Stack = createStackNavigator();
@@ -12,6 +16,26 @@ export default function AdministradorStack() {
         name="administrador"
         component={Administrador}
         options={{ title: "Administrador" }}
+      />
+      <Stack.Screen
+        name="gestion-depto"
+        component={GestionDepto}
+        options={{ title: "Volver Administrador" }}
+      />
+      <Stack.Screen
+        name="gestion-jefe"
+        component={GestionJefe}
+        options={{ title: "Volver Administrador" }}
+      />
+       <Stack.Screen
+        name="add-depto"
+        component={addDepto}
+        options={{ title: "Volver Gestión de Departamento" }}
+      />
+       <Stack.Screen
+        name="add-jefe"
+        component={addJefe}
+        options={{ title: "Volver Administrador" }}
       />
     </Stack.Navigator>
   );
