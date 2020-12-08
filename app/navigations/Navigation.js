@@ -5,7 +5,7 @@ import { Icon } from "react-native-elements";
 import EstudianteStack from "./EstudianteStack";
 import JefedeptoStack from "./JefedeptoStack";
 import InstructoresStack from "./InstructorStack";
-import SubdirectoresStack from "./SubdirectorStack";
+import SubdirectorStack from "./SubdirectorStack";
 import AdministradorStack from "./AdministradorStack";
 
 const Tab = createBottomTabNavigator();
@@ -40,7 +40,7 @@ export default function Navigation() {
         />
         <Tab.Screen
           name="subdirector"
-          component={SubdirectoresStack}
+          component={SubdirectorStack}
           options={{ title: "Subdirectores" }}
         />
         <Tab.Screen

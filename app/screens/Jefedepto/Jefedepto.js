@@ -7,7 +7,8 @@ export default function Jefedepto() {
   const navigation = useNavigation();
   return (
     <ScrollView centerContent={true} style={styles.viewBody}>
-      <Text style={styles.textTitle}>JEFE DE DEPARTAMENTO</Text>
+        
+      <Text style={styles.textTitle}>Jefe de Departamento</Text>
 
       <View style={styles.viewBtn}>
         <Button

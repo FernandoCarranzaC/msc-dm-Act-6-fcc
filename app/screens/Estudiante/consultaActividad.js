@@ -3,24 +3,19 @@ import { StyleSheet, View, ScrollView, Text, Alert,TouchableOpacity } from "reac
 import { Button, ListItem, Icon } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 
-export default function Subdirector() {
+export default function constulaActivdad() {
   const navigation = useNavigation();
   return (
     <ScrollView centerContent={true} style={styles.viewBody}>
-      <Text style={styles.stextTitle}>Estudiante</Text>
-      <Text style={styles.textTitle}>GESTIONAR CATEGORIAS</Text>
-
+      <Text style={styles.textTitle}>CONSULTAR ACTIVIDADES VIGENTES</Text>
+      <Text></Text>
+      <Text style={styles.textsubTitle}>Actividades Disponibles</Text>
       <View style={styles.viewBtn}>
-        <Button
-          title="Agregar Categoria"
-          buttonStyle={styles.btnStyle}
-          containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("add-categoria")}
-        />
+     
       </View>
       <Text > {"\n"} </Text>
       {list.map((item, i) => (
-      <TouchableOpacity onPress = {() => alertItemName(item)}>
+      <TouchableOpacity onPress = {() => navigation.navigate("add-registroa")}>
        <ListItem key={i} bottomDivider>
           <Icon name={item.icon} type="material-community" />
           <ListItem.Content>
@@ -50,14 +45,22 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: "center",
     fontSize: 20,
-    color:"maroon",
+    color:"blue",
+    fontWeight: "bold"
+  },
+  textsubTitle: {
+    marginTop: 20,
+    marginBottom: 20,
+    textAlign: "center",
+    fontSize: 15,
+    color:"blue",
     fontWeight: "bold"
   },
   btnAddMaestro: {
     marginBottom: 5
   },
   btnStyle: {
-    backgroundColor: "#CA6F1E"
+    backgroundColor: "#5DADE2"
   },
   btnContainer: {
     width: "80%"
@@ -70,11 +73,11 @@ const styles = StyleSheet.create({
 
 const list = [
   {
-    title: "Nombre categoria 1",
+    title: "Actividad vigente 1",
     icon: "account"
   },
   {
-    title: "Nombre categoria 2",
+    title: "Actividad vigentes 2",
     icon: "account-outline"
   }
 ];

@@ -3,24 +3,24 @@ import { StyleSheet, View, ScrollView, Text, Alert,TouchableOpacity } from "reac
 import { Button, ListItem, Icon } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 
-export default function Subdirector() {
+export default function addRegistro() {
   const navigation = useNavigation();
   return (
     <ScrollView centerContent={true} style={styles.viewBody}>
-      <Text style={styles.stextTitle}>Estudiante</Text>
-      <Text style={styles.textTitle}>GESTIONAR CATEGORIAS</Text>
-
+      <Text style={styles.textTitle}>Registro de Actividades</Text>
+      <Text></Text>
+      <Text>Actividades Displibles</Text>
       <View style={styles.viewBtn}>
-        <Button
-          title="Agregar Categoria"
+      <Button
+          title="Agregar Jefe Departamental"
           buttonStyle={styles.btnStyle}
           containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("add-categoria")}
-        />
+          onPress={() => navigation.navigate("add-jefe")}
+        /> 
       </View>
       <Text > {"\n"} </Text>
       {list.map((item, i) => (
-      <TouchableOpacity onPress = {() => alertItemName(item)}>
+      <TouchableOpacity onPress = {() => navigation.navigate("add-registroa")}>
        <ListItem key={i} bottomDivider>
           <Icon name={item.icon} type="material-community" />
           <ListItem.Content>
@@ -50,14 +50,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: "center",
     fontSize: 20,
-    color:"maroon",
+    color:"blue",
     fontWeight: "bold"
   },
   btnAddMaestro: {
     marginBottom: 5
   },
   btnStyle: {
-    backgroundColor: "#CA6F1E"
+    backgroundColor: "#5DADE2"
   },
   btnContainer: {
     width: "80%"
@@ -70,11 +70,11 @@ const styles = StyleSheet.create({
 
 const list = [
   {
-    title: "Nombre categoria 1",
+    title: "Nombre Jefe 1",
     icon: "account"
   },
   {
-    title: "Nombre categoria 2",
+    title: "Nombre Jefe 2",
     icon: "account-outline"
   }
 ];

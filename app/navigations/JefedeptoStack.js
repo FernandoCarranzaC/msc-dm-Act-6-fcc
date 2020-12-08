@@ -1,6 +1,6 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Jefedeptos from "../screens/Jefedepto/Jefedepto";
+import Jefedepto from "../screens/Jefedepto/Jefedepto";
 import GestionPersonal from "../screens/Jefedepto/GestionPersonal";
 import GestionActividad from "../screens/Jefedepto/GestionActividad";
 import addActividad from "../screens/Jefedepto/addActividad";
@@ -13,8 +13,8 @@ export default function JefedeptoStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Jefesdeptos"
-        component={Jefedeptos}
+        name="Jefesdepto"
+        component={Jefedepto}
         options={{ title: "Jefes de Departamentos" }}
       />
       <Stack.Screen
@@ -30,12 +30,12 @@ export default function JefedeptoStack() {
        <Stack.Screen
         name="add-actividad"
         component={addActividad}
-        options={{ title: "Volver Gestión de Departamento" }}
+        options={{ title: "Volver Gestionar  Actividades" }}
       />
        <Stack.Screen
         name="add-personal"
         component={addPersonal}
-        options={{ title: "Volver Administrador" }}
+        options={{ title: "Volver a Gestionar Personal" }}
       />
     </Stack.Navigator>
   );

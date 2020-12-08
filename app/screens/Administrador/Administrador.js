@@ -62,13 +62,4 @@ const styles = StyleSheet.create({
   }
 });
 
-const list = [
-  {
-    title: "Maestro 1",
-    icon: "account"
-  },
-  {
-    title: "Maestro 2",
-    icon: "account-outline"
-  }
-];
+
