@@ -7,32 +7,26 @@ export default function constulaActivdad() {
   const navigation = useNavigation();
   return (
     <ScrollView centerContent={true} style={styles.viewBody}>
-      <Text style={styles.textTitle}>CONSULTAR ACTIVIDADES VIGENTES</Text>
-      <Text></Text>
-      <Text style={styles.textsubTitle}>Actividades Disponibles</Text>
+      <Text style={styles.textTitle}>CONSULTAR ACTIVIDADES</Text>
+     
+      <Text style={styles.textsubTitle}>Actividades Vigentes Disponibles</Text>
       <View style={styles.viewBtn}>
      
       </View>
-      <Text > {"\n"} </Text>
+    
       {list.map((item, i) => (
-      <TouchableOpacity onPress = {() => navigation.navigate("add-registroa")}>
+      <TouchableOpacity onPress = {() => navigation.navigate("detalle-actividad")}>
        <ListItem key={i} bottomDivider>
           <Icon name={item.icon} type="material-community" />
           <ListItem.Content>
             <ListItem.Title>{item.title}</ListItem.Title>
           </ListItem.Content>
-          <ListItem.Chevron />
-        </ListItem>
+          </ListItem>
         </TouchableOpacity>
       ))}
     </ScrollView>
   );
 }
-
-const alertItemName = (item) => {
-  Alert.alert(item.title+"\n actualizar  borrar ")
-}
-
 
 
 const styles = StyleSheet.create({
@@ -45,7 +39,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: "center",
     fontSize: 20,
-    color:"blue",
+    color:"#2980B9",
     fontWeight: "bold"
   },
   textsubTitle: {
@@ -53,14 +47,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: "center",
     fontSize: 15,
-    color:"blue",
+    color:"#2980B9",
     fontWeight: "bold"
   },
   btnAddMaestro: {
     marginBottom: 5
   },
   btnStyle: {
-    backgroundColor: "#5DADE2"
+    backgroundColor: "#00BCD4"
   },
   btnContainer: {
     width: "80%"
@@ -73,11 +67,23 @@ const styles = StyleSheet.create({
 
 const list = [
   {
-    title: "Actividad vigente 1",
-    icon: "account"
+    title: "Ciclismo Ruta 1",
+    icon: "bike"
   },
   {
-    title: "Actividad vigentes 2",
-    icon: "account-outline"
+    title: "Brigada de Ecología 2",
+    icon: "biathlon"
+  },
+  {
+    title: "Taller de lectura 3",
+    icon: "book-open-variant"
+  },
+  {
+    title: "Brigada de Rescate 4",
+    icon: "hospital-box"
+  },
+  {
+    title: "Basquet ball 5",
+    icon: "tennis-ball"
   }
 ];

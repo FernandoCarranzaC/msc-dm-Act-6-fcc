@@ -4,6 +4,7 @@ import Estudiante from "../screens/Estudiante/Estudiante";
 import actividadCursada from "../screens/Estudiante/actividadCursada";
 import addRegistroA from "../screens/Estudiante/addRegistroA";
 import constultaActividad from "..//screens/Estudiante/consultaActividad";
+import detalleActividad from "..//screens/Estudiante/detalleActividad";
 
 const Stack = createStackNavigator();
 
@@ -19,19 +20,23 @@ export default function EstudianteStack() {
       <Stack.Screen
         name="constulta-Actividad"
         component={constultaActividad}
-        options={{ title: "Constulta actividades" }}
+        options={{ title: "Regresar a estudiante" }}
       />
       <Stack.Screen
         name="add-RegistroA"
         component={addRegistroA}
-        options={{ title: "Registrar Actividad" }}
+        options={{ title: "Regresar a estudiante" }}
       />
        <Stack.Screen
         name="actividad-Cursada"
         component={actividadCursada}
-        options={{ title: "Arcividad Cursada" }}
+        options={{ title: "Regresar a estudiante" }}
       />
-       
+        <Stack.Screen
+        name="detalle-actividad"
+        component={detalleActividad}
+        options={{ title: "Regresa consulta actividades " }}
+      />
        
     </Stack.Navigator>
   );

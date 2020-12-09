@@ -76,5 +76,6 @@ const list = [
   {
     title: "Nombre categoria 2",
     icon: "account-outline"
-  }
+  },
+  
 ];

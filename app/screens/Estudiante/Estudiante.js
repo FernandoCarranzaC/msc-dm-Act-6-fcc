@@ -55,13 +55,13 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 30,
     fontWeight: "bold",
-    color:"blue"
+    color:"#2980B9"
   },
   btnAddMaestro: {
     marginBottom: 5
   },
   btnStyle: {
-    backgroundColor: "#5DADE2"
+    backgroundColor: "#00BCD4"
   },
   btnContainer: {
     width: "70%"

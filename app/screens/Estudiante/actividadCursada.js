@@ -7,20 +7,15 @@ export default function actividadCursada() {
   const navigation = useNavigation();
   return (
     <ScrollView centerContent={true} style={styles.viewBody}>
-      <Text style={styles.textTitle}>Registro de Actividades</Text>
+      <Text style={styles.textTitle}>Actividades Cursadas</Text>
       <Text></Text>
-      <Text>Actividades Displibles</Text>
+     
       <View style={styles.viewBtn}>
-      <Button
-          title="Agregar Jefe Departamental"
-          buttonStyle={styles.btnStyle}
-          containerStyle={styles.btnContainer}
-          onPress={() => navigation.navigate("add-jefe")}
-        /> 
+     
       </View>
       <Text > {"\n"} </Text>
       {list.map((item, i) => (
-      <TouchableOpacity onPress = {() => navigation.navigate("add-registroa")}>
+      <TouchableOpacity onPress = {() =>alertItemactividad(item) }>
        <ListItem key={i} bottomDivider>
           <Icon name={item.icon} type="material-community" />
           <ListItem.Content>
@@ -34,8 +29,8 @@ export default function actividadCursada() {
   );
 }
 
-const alertItemName = (item) => {
-  Alert.alert(item.title+"\n actualizar  borrar ")
+const alertItemactividad = (item) => {
+  Alert.alert(item.title+"\n Calificación ")
 }
 
 
@@ -50,14 +45,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     textAlign: "center",
     fontSize: 20,
-    color:"blue",
+    color:"#2980B9",
     fontWeight: "bold"
   },
   btnAddMaestro: {
     marginBottom: 5
   },
   btnStyle: {
-    backgroundColor: "#5DADE2"
+    backgroundColor: "#00BCD4"
   },
   btnContainer: {
     width: "80%"
@@ -70,11 +65,15 @@ const styles = StyleSheet.create({
 
 const list = [
   {
-    title: "Nombre Jefe 1",
-    icon: "account"
+    title: "Ciclismo Ruta 1",
+    icon: "bike"
   },
   {
-    title: "Nombre Jefe 2",
-    icon: "account-outline"
+    title: "Taller de lectura 2",
+    icon: "book-open-variant"
+  },
+  {
+    title: "Congreso 3",
+    icon: "tennis-ball"
   }
 ];
