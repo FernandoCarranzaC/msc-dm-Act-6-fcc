@@ -31,17 +31,17 @@ export default function Navigation() {
         <Tab.Screen
           name="jefe"
           component={JefedeptoStack}
-          options={{ title: "Jefe" }}
+          options={{ title: "Jefes Departamentales" }}
         />
         <Tab.Screen
           name="instructor"
           component={InstructoresStack}
-          options={{ title: "Instructores" }}
+          options={{ title: "Instructor" }}
         />
         <Tab.Screen
           name="subdirector"
           component={SubdirectorStack}
-          options={{ title: "Subdirectores" }}
+          options={{ title: "Subdirector Académico" }}
         />
         <Tab.Screen
           name="administrador"
@@ -57,16 +57,16 @@ function screenOptions(route, color) {
 
   switch (route.name) {
     case "estudiante":
-      iconName = "account";
+      iconName = "face-outline";
       break;
     case "jefe":
       iconName = "account-group";
       break;
     case "instructor":
-      iconName = "account-check";
+      iconName = "teach";
       break;
     case "subdirector":
-      iconName = "book";
+      iconName = "account-tie";
       break;
     case "administrador":
       iconName = "chart-bar";

@@ -7,7 +7,6 @@ export default function Subdirector() {
   const navigation = useNavigation();
   return (
     <ScrollView centerContent={true} style={styles.viewBody}>
-      <Text style={styles.stextTitle}>Estudiante</Text>
       <Text style={styles.textTitle}>GESTIONAR CATEGORIAS</Text>
 
       <View style={styles.viewBtn}>

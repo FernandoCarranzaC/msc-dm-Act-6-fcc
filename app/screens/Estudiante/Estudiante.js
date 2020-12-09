@@ -8,8 +8,7 @@ export default function Estudiante() {
   return (
     <ScrollView centerContent={true} style={styles.viewBody}>
       <Text style={styles.textTitle}>Estudiante</Text>
-      <Text ></Text>
-     
+        
      <View style={styles.viewBtn}>
        <Button
          title="Consultar Actividades"
