@@ -5,6 +5,7 @@ import actividadCursada from "../screens/Estudiante/actividadCursada";
 import addRegistroA from "../screens/Estudiante/addRegistroA";
 import constultaActividad from "..//screens/Estudiante/consultaActividad";
 import detalleActividad from "..//screens/Estudiante/detalleActividad";
+import addFormularioEst from "..//screens/Estudiante/addFormularioEst";
 
 const Stack = createStackNavigator();
 
@@ -37,6 +38,12 @@ export default function EstudianteStack() {
         component={detalleActividad}
         options={{ title: "Regresa consulta actividades " }}
       />
+       <Stack.Screen
+        name="add-FormularioEst"
+        component={addFormularioEst}
+        options={{ title: "Regresa a Registrarse en actividades " }}
+      />
+
        
     </Stack.Navigator>
   );

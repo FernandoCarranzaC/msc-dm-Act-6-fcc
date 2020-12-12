@@ -15,7 +15,7 @@ export default function addRegistro() {
       </View>
     
       {list.map((item, i) => (
-      <TouchableOpacity onPress = {() => alertRegistro(item)}>
+      <TouchableOpacity onPress = {() => navigation.navigate("add-FormularioEst")}>
        <ListItem key={i} bottomDivider>
           <Icon name={item.icon} type="material-community" />
           <ListItem.Content>
