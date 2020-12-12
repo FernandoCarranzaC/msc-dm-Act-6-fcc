@@ -53,7 +53,7 @@ export default function addFormularioEst() {
       <Text></Text>
       <View style={styles.viewBtn}>
         <Button
-          title="Añadir Jefe Departamental"
+          title="Registrarse en actividad"
           buttonStyle={styles.btnStyle}
           containerStyle={styles.btnContainer}
           onPress={showAlert}

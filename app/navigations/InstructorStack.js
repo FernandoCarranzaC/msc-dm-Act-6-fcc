@@ -22,7 +22,7 @@ export default function InstructorStack() {
         <Stack.Screen
         name="asistencia-instructor"
         component={AsistenciaInstructor}
-        options={{ title: "Regresar a Gestion Instructor" }}
+        options={{ title: "Regresar a Gestion Instructor", color:"red" } }
       />
        <Stack.Screen
         name="califica"
